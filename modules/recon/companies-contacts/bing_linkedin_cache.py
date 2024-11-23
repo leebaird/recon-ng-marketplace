@@ -95,10 +95,11 @@ class Module(BaseModule, BingAPIMixin):
         jobtitle = 'Undetermined'       # default if no title found
         chunks   = snippet.split('...') # if more than one '...' then no title or can't predict where it is
         if ' at ' in snippet and not 'See who you know' in snippet and company in snippet.lower() and len(chunks) < 3:
-            if re.search('^View ', snippet):    # here we want the string after " ... " and before " at "
-                m = re.search('\.{3} (?P<title>.+?) at ', snippet)
-            else:                                   # here we want the string after "^$employeename. " and before " at "
-                m = re.search('^[^.]+. (?P<title>.+?) at ', snippet)
+            if re.search(r'^View ', snippet):    # here we want the string after " ... " and before " at "
+                m = re.search(r'\.{3} (?P<title>.+?) at ', snippet)
+            else:                                # here we want the string after "^$employeename. " and before " at "
+                m = re.search(r'^[^.]+. (?P<title>.+?) at ', snippet)
+
             try:
                 jobtitle = m.group('title')
             except AttributeError:
