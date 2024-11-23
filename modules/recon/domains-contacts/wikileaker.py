@@ -11,7 +11,7 @@ class Module(BaseModule):
     meta = {
         'name': 'WikiLeaker',
         'author': 'Joe Gray (@C_3PJoe)',
-        'version': '1.0',
+        'version': '1.1',
         'description': 'A WikiLeaks scraper inspired by the Datasploit module previously written in Python2. It '
                        'searches Wikileaks for leaks containing the subject domain. If anything is found, this module '
                        'will seek to parse out the URL, Sender Email, Date, Leak, and Subject of the email. This will '
