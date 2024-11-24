@@ -91,7 +91,7 @@
   path: recon/companies-contacts/bing_linkedin_cache
   required_keys:
   - bing_api
-  version: '1.0'
+  version: '1.1'
 - author: Censys, Inc. <support@censys.io>
   dependencies:
   - censys>=2.1.2
@@ -251,7 +251,7 @@
   name: Contact Name Mangler
   path: recon/contacts-contacts/mangle
   required_keys: []
-  version: '1.0'
+  version: '1.1'
 - author: Ethan Robish (@EthanRobish)
   dependencies: []
   description: Applies a regex or unmangle pattern to all of the contacts stored in
@@ -462,7 +462,7 @@
   name: WikiLeaker
   path: recon/domains-contacts/wikileaker
   required_keys: []
-  version: '1.0'
+  version: '1.1'
 - author: Marcus Watson (@BranMacMuffin)
   dependencies: []
   description: Brute forces TLDs and SLDs using DNS. Updates the 'domains' table with
